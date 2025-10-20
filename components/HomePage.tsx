@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
             zIndex: 0,
           }}
         >
-          <source src="/bg_video.webm" type="video/webm" />
+          <source src="/bg_video.mp4" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 

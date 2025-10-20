@@ -20,6 +20,9 @@ import {
   Timeline,
   AutoAwesome,
 } from "@mui/icons-material";
+import TextFieldsIcon from "@mui/icons-material/TextFields";
+import HelpCenterIcon from "@mui/icons-material/HelpCenter";
+import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
 
 const HomePage: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -62,6 +65,7 @@ const HomePage: React.FC = () => {
             display: "block",
             objectFit: isMobile ? "contain" : "cover",
             objectPosition: "center",
+            backgroundColor: "transparent",
             zIndex: 0,
           }}
         >
@@ -149,7 +153,7 @@ const HomePage: React.FC = () => {
                 sx={{
                   fontSize: { xs: "1rem", md: "1.1rem" },
                   lineHeight: 1.8,
-                  color: "#2c3e50",
+                  color: "#eaf6f6",
                 }}
               >
                 Здесь я делюсь гайдом — что нужно изучить в первую очередь,
@@ -192,7 +196,7 @@ const HomePage: React.FC = () => {
                     mb: { xs: 2, md: 3 },
                   }}
                 >
-                  <VideoLibrary
+                  <HelpCenterIcon
                     sx={{
                       mr: 2,
                       color: "#66bfbf",
@@ -204,7 +208,7 @@ const HomePage: React.FC = () => {
                     component="h3"
                     sx={{
                       fontWeight: "bold",
-                      color: "#2c3e50",
+                      color: "#eaf6f6",
                       fontSize: { xs: "1.25rem", md: "1.5rem" },
                     }}
                   >
@@ -294,7 +298,7 @@ const HomePage: React.FC = () => {
                     mb: { xs: 2, md: 3 },
                   }}
                 >
-                  <Palette
+                  <HistoryEduIcon
                     sx={{
                       mr: 2,
                       color: "#f76b8a",
@@ -306,7 +310,7 @@ const HomePage: React.FC = () => {
                     component="h3"
                     sx={{
                       fontWeight: "bold",
-                      color: "#2c3e50",
+                      color: "#eaf6f6",
                       fontSize: { xs: "1.25rem", md: "1.5rem" },
                     }}
                   >
@@ -328,7 +332,7 @@ const HomePage: React.FC = () => {
                 </Typography>
                 <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
                   <Chip
-                    label="Shape Animation"
+                    label="Шейповая анимация"
                     sx={{
                       backgroundColor: "rgba(247, 107, 138, 0.2)",
                       color: "#f76b8a",
@@ -338,7 +342,7 @@ const HomePage: React.FC = () => {
                     }}
                   />
                   <Chip
-                    label="Text Animation"
+                    label="Анимация текста"
                     sx={{
                       backgroundColor: "rgba(247, 107, 138, 0.2)",
                       color: "#f76b8a",
@@ -348,7 +352,7 @@ const HomePage: React.FC = () => {
                     }}
                   />
                   <Chip
-                    label="Masking"
+                    label="Маски"
                     sx={{
                       backgroundColor: "rgba(247, 107, 138, 0.2)",
                       color: "#f76b8a",
@@ -358,7 +362,28 @@ const HomePage: React.FC = () => {
                     }}
                   />
                   <Chip
-                    label="Expressions"
+                    label="Эффекты "
+                    sx={{
+                      backgroundColor: "rgba(247, 107, 138, 0.2)",
+                      color: "#f76b8a",
+                      border: "1px solid rgba(247, 107, 138, 0.3)",
+                      fontSize: { xs: "0.75rem", md: "0.875rem" },
+                      px: { xs: 0.75, md: 1 },
+                    }}
+                  />
+                  <Chip
+                    label="Скрипты"
+                    sx={{
+                      backgroundColor: "rgba(247, 107, 138, 0.2)",
+                      color: "#f76b8a",
+                      border: "1px solid rgba(247, 107, 138, 0.3)",
+                      fontSize: { xs: "0.75rem", md: "0.875rem" },
+                      px: { xs: 0.75, md: 1 },
+                    }}
+                  />
+
+                  <Chip
+                    label="Плагины "
                     sx={{
                       backgroundColor: "rgba(247, 107, 138, 0.2)",
                       color: "#f76b8a",
@@ -445,7 +470,7 @@ const HomePage: React.FC = () => {
                   </Typography>
                 </Box>
                 <Box sx={{ flex: 1, textAlign: "center" }}>
-                  <VideoLibrary
+                  <TextFieldsIcon
                     sx={{
                       fontSize: { xs: "2.25rem", md: "3rem" },
                       color: "#f76b8a",

@@ -91,21 +91,6 @@ const Navbar: React.FC = () => {
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
             <Button
               color="inherit"
-              startIcon={<MenuBook />}
-              sx={{
-                color: "#eaf6f6",
-                fontWeight: "500",
-                "&:hover": {
-                  backgroundColor: "rgba(102, 191, 191, 0.15)",
-                  transform: "translateY(-2px)",
-                  transition: "all 0.3s ease",
-                },
-              }}
-            >
-              Гайд
-            </Button>
-            <Button
-              color="inherit"
               startIcon={<BuildCircle />}
               sx={{
                 color: "#eaf6f6",

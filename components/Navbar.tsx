@@ -25,6 +25,8 @@ import {
 } from "@mui/icons-material";
 import { keyTools } from "../data/keyTools";
 import { theme as customTheme } from "../styles/theme";
+import StartIcon from "@mui/icons-material/Start";
+import ArchitectureOutlinedIcon from "@mui/icons-material/ArchitectureOutlined";
 
 const Navbar: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -60,10 +62,10 @@ const Navbar: React.FC = () => {
     <AppBar
       position="sticky"
       sx={{
-        background: customTheme.components.navbar.background,
-        backdropFilter: customTheme.components.navbar.backdropFilter,
-        borderBottom: customTheme.components.navbar.borderBottom,
-        boxShadow: customTheme.components.navbar.boxShadow,
+        background: "#D8E1E3",
+        backdropFilter: "blur(10px)",
+        borderBottom: "none",
+        boxShadow: "none",
       }}
     >
       <Container maxWidth="lg">
@@ -86,7 +88,7 @@ const Navbar: React.FC = () => {
               <PlayArrow
                 sx={{
                   mr: 1,
-                  color: customTheme.colors.primary.main,
+                  color: customTheme.colors.secondary.dark,
                   fontSize: { xs: "1.5rem", md: "1.8rem" },
                 }}
               />
@@ -95,10 +97,7 @@ const Navbar: React.FC = () => {
                 component="div"
                 sx={{
                   fontWeight: "bold",
-                  background: customTheme.gradients.text.logo,
-                  backgroundClip: "text",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  color: customTheme.colors.secondary.dark,
                   fontSize: { xs: "1.25rem", md: "1.5rem" },
                   whiteSpace: "nowrap",
                   overflow: "hidden",
@@ -114,29 +113,29 @@ const Navbar: React.FC = () => {
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
             <Button
               color="inherit"
-              startIcon={<MenuBook />}
+              startIcon={<StartIcon />}
               sx={{
-                color: "#eaf6f6",
+                color: customTheme.colors.text.primary,
                 fontWeight: "500",
                 "&:hover": {
-                  backgroundColor: "rgba(102, 191, 191, 0.15)",
+                  backgroundColor: "rgba(188, 108, 41, 0.15)",
                   transform: "translateY(-2px)",
                   transition: "all 0.3s ease",
                 },
               }}
             >
-              Гайд
+              Начни здесь
             </Button>
             <Button
               color="inherit"
-              startIcon={<BuildCircle />}
+              startIcon={<ArchitectureOutlinedIcon />}
               endIcon={<ArrowDropDown />}
               onClick={handleOpenToolsMenu}
               sx={{
-                color: "#eaf6f6",
+                color: customTheme.colors.text.primary,
                 fontWeight: "500",
                 "&:hover": {
-                  backgroundColor: "rgba(102, 191, 191, 0.15)",
+                  backgroundColor: "rgba(188, 108, 41, 0.15)",
                   transform: "translateY(-2px)",
                   transition: "all 0.3s ease",
                 },
@@ -173,16 +172,16 @@ const Navbar: React.FC = () => {
               color="inherit"
               startIcon={<AutoFixHigh />}
               sx={{
-                color: "#eaf6f6",
+                color: customTheme.colors.text.primary,
                 fontWeight: "500",
                 "&:hover": {
-                  backgroundColor: "rgba(102, 191, 191, 0.15)",
+                  backgroundColor: "rgba(188, 108, 41, 0.15)",
                   transform: "translateY(-2px)",
                   transition: "all 0.3s ease",
                 },
               }}
             >
-              Техники
+              Фишки
             </Button>
           </Box>
 
@@ -194,8 +193,8 @@ const Navbar: React.FC = () => {
               edge="end"
               sx={{
                 ml: 1,
-                color: "#eaf6f6",
-                "&:hover": { backgroundColor: "rgba(102, 191, 191, 0.15)" },
+                color: customTheme.colors.text.primary,
+                "&:hover": { backgroundColor: "rgba(188, 108, 41, 0.15)" },
               }}
             >
               <MenuIcon />

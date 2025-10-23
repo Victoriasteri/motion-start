@@ -5,13 +5,9 @@ import {
   Container as MuiContainer,
   Typography,
   Box,
-  Card,
-  CardContent,
   Paper,
   Chip,
-  Divider,
 } from "@mui/material";
-import Container from "../../../components/Container";
 import {
   Timeline,
   PlayCircleOutline,
@@ -22,86 +18,125 @@ import { theme as customTheme } from "../../../styles/theme";
 
 const ShapeAnimationPage: React.FC = () => {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        backgroundColor: customTheme.colors.background.dark,
-      }}
-    >
-      <MuiContainer
-        maxWidth="lg"
+    <Box sx={{ minHeight: "100vh" }}>
+      {/* Header Section - White background */}
+      <Box
         sx={{
-          pt: { xs: 4, md: 8 },
-          pb: { xs: 4, md: 8 },
+          backgroundColor: "#ffffff",
+          py: { xs: 6, md: 10 },
           px: { xs: 2, sm: 3 },
         }}
       >
-        {/* Header */}
-        <Container
-          title="Shape Animation"
-          titleColor="white"
-          variant="primary"
-          sx={{
-            mb: { xs: 4, md: 6 },
-            textAlign: "center",
-          }}
-        >
-          <Typography
-            variant="h4"
-            component="h1"
-            sx={{
-              fontWeight: "bold",
-              background: customTheme.gradients.text.primary,
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              fontSize: { xs: "1.75rem", md: "2.5rem" },
-              mb: 2,
-            }}
-          >
-            Анимация фигур в After Effects
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: customTheme.colors.text.primary,
-              fontSize: { xs: "1rem", md: "1.1rem" },
-              lineHeight: 1.8,
-            }}
-          >
-            Освойте фундаментальные техники анимации геометрических форм
-          </Typography>
-        </Container>
+        <MuiContainer maxWidth="lg">
+          <Box sx={{ textAlign: "center" }}>
+            <Typography
+              variant="h2"
+              component="h1"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.primary.main,
+                fontSize: { xs: "2rem", md: "3rem" },
+                mb: 3,
+              }}
+            >
+              Shape Animation
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1.5rem", md: "2rem" },
+                mb: 2,
+              }}
+            >
+              Анимация фигур в After Effects
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                maxWidth: "600px",
+                mx: "auto",
+              }}
+            >
+              Освойте фундаментальные техники анимации геометрических форм
+            </Typography>
+          </Box>
+        </MuiContainer>
+      </Box>
 
-        {/* Introduction Section */}
-        <Container
-          title="Что такое Shape Animation?"
-          titleColor="white"
-          variant="primary"
-          sx={{ mb: 4 }}
-        >
-          <Typography
-            variant="body1"
-            sx={{
-              fontSize: { xs: "1rem", md: "1.1rem" },
-              lineHeight: 1.8,
-              mb: 4,
-              color: customTheme.colors.text.primary,
-              textAlign: "center",
-            }}
-          >
-            Анимация фигур — это фундамент моушн-дизайна. Это искусство
-            оживления простых геометрических форм, превращения статичных
-            элементов в динамичные, выразительные анимации. Научившись создавать
-            плавные и профессиональные анимации фигур, вы сможете создавать
-            сложные композиции и востребованные коммерческие проекты.
-          </Typography>
+      {/* Introduction Section - D8E1E3 background */}
+      <Box
+        sx={{
+          backgroundColor: "#D8E1E3",
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <MuiContainer maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1.75rem", md: "2.5rem" },
+                mb: 4,
+              }}
+            >
+              Что такое Shape Animation?
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: customTheme.colors.text.primary,
+                maxWidth: "800px",
+                mx: "auto",
+                mb: 4,
+              }}
+            >
+              Анимация фигур — это фундамент моушн-дизайна. Это навык оживления
+              простых геометрических форм, превращения статичных элементов в
+              динамичные, выразительные анимации. Научившись создавать плавные и
+              профессиональные анимации фигур, вы сможете создавать сложные
+              композиции и востребованные коммерческие проекты.
+            </Typography>
+
+            {/* Video without frame */}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                mb: 6,
+              }}
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  borderRadius: "8px",
+                }}
+              >
+                <source src="/animated_scene_designer.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </Box>
+          </Box>
 
           <Box
             sx={{
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
-              gap: 3,
+              gap: 4,
               justifyContent: "space-between",
             }}
           >
@@ -118,7 +153,7 @@ const ShapeAnimationPage: React.FC = () => {
                 sx={{
                   fontWeight: "bold",
                   color: customTheme.colors.text.primary,
-                  mb: 1,
+                  mb: 2,
                 }}
               >
                 Визуальная основа
@@ -147,7 +182,7 @@ const ShapeAnimationPage: React.FC = () => {
                 sx={{
                   fontWeight: "bold",
                   color: customTheme.colors.text.primary,
-                  mb: 1,
+                  mb: 2,
                 }}
               >
                 Техническая точность
@@ -176,7 +211,7 @@ const ShapeAnimationPage: React.FC = () => {
                 sx={{
                   fontWeight: "bold",
                   color: customTheme.colors.text.primary,
-                  mb: 1,
+                  mb: 2,
                 }}
               >
                 Коммерческая ценность
@@ -193,21 +228,35 @@ const ShapeAnimationPage: React.FC = () => {
               </Typography>
             </Box>
           </Box>
-        </Container>
+        </MuiContainer>
+      </Box>
 
-        {/* Key Tools Section */}
-        <Container
-          title="Ключевые инструменты After Effects"
-          titleColor="white"
-          variant="secondary"
-          sx={{ mb: 4 }}
-        >
-          <Box sx={{ mb: 4 }}>
+      {/* Key Tools Section - White background */}
+      <Box
+        sx={{
+          backgroundColor: "#ffffff",
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <MuiContainer maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1.75rem", md: "2.5rem" },
+                mb: 4,
+              }}
+            >
+              Ключевые инструменты After Effects
+            </Typography>
             <Box
               sx={{
                 display: "flex",
                 flexWrap: "wrap",
-                gap: 1,
+                gap: 2,
                 justifyContent: "center",
               }}
             >
@@ -267,242 +316,330 @@ const ShapeAnimationPage: React.FC = () => {
               />
             </Box>
           </Box>
-        </Container>
+        </MuiContainer>
+      </Box>
 
-        {/* Video Examples Section */}
-        <Container
-          title="Примеры анимации фигур"
-          titleColor={customTheme.colors.text.secondary}
-          icon={
+      {/* Video Examples Section - D8E1E3 background */}
+      <Box
+        sx={{
+          backgroundColor: "#D8E1E3",
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <MuiContainer maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 6 }}>
             <PlayCircleOutline
-              sx={{ color: customTheme.colors.primary.main, fontSize: 30 }}
+              sx={{
+                fontSize: "3rem",
+                color: customTheme.colors.primary.main,
+                mb: 3,
+              }}
             />
-          }
-          variant="light"
-          sx={{ mb: 4 }}
-        >
-          <Typography
-            variant="body1"
-            sx={{
-              fontSize: { xs: "1rem", md: "1.1rem" },
-              lineHeight: 1.8,
-              mb: 4,
-              color: customTheme.colors.text.secondary,
-              textAlign: "center",
-            }}
-          >
-            Изучите различные техники анимации фигур на практических примерах
-          </Typography>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              gap: 3,
-              flexWrap: "wrap",
-            }}
-          >
-            <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 45%" } }}>
-              <Paper
-                sx={{
-                  p: 3,
-                  backgroundColor: customTheme.colors.background.cardLight,
-                  border: `2px dashed ${customTheme.colors.primary.main}`,
-                  borderRadius: 2,
-                  textAlign: "center",
-                  minHeight: "200px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <PlayCircleOutline
-                  sx={{
-                    fontSize: "4rem",
-                    color: customTheme.colors.primary.main,
-                    mb: 2,
-                  }}
-                />
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: customTheme.colors.primary.main,
-                    mb: 1,
-                    fontWeight: "bold",
-                  }}
-                >
-                  Базовая анимация форм
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: customTheme.colors.text.primary,
-                    opacity: 0.8,
-                  }}
-                >
-                  [Видео: Анимация круга, квадрата, треугольника]
-                </Typography>
-              </Paper>
-            </Box>
-
-            <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 45%" } }}>
-              <Paper
-                sx={{
-                  p: 3,
-                  backgroundColor: customTheme.colors.background.cardLight,
-                  border: `2px dashed ${customTheme.colors.primary.main}`,
-                  borderRadius: 2,
-                  textAlign: "center",
-                  minHeight: "200px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <PlayCircleOutline
-                  sx={{
-                    fontSize: "4rem",
-                    color: customTheme.colors.primary.main,
-                    mb: 2,
-                  }}
-                />
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: customTheme.colors.primary.main,
-                    mb: 1,
-                    fontWeight: "bold",
-                  }}
-                >
-                  Trim Paths эффект
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: customTheme.colors.text.primary,
-                    opacity: 0.8,
-                  }}
-                >
-                  [Видео: Анимация появления линий и контуров]
-                </Typography>
-              </Paper>
-            </Box>
-
-            <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 45%" } }}>
-              <Paper
-                sx={{
-                  p: 3,
-                  backgroundColor: customTheme.colors.background.cardLight,
-                  border: `2px dashed ${customTheme.colors.primary.main}`,
-                  borderRadius: 2,
-                  textAlign: "center",
-                  minHeight: "200px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <PlayCircleOutline
-                  sx={{
-                    fontSize: "4rem",
-                    color: customTheme.colors.primary.main,
-                    mb: 2,
-                  }}
-                />
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: customTheme.colors.primary.main,
-                    mb: 1,
-                    fontWeight: "bold",
-                  }}
-                >
-                  Repeater анимация
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: customTheme.colors.text.primary,
-                    opacity: 0.8,
-                  }}
-                >
-                  [Видео: Создание повторяющихся паттернов]
-                </Typography>
-              </Paper>
-            </Box>
-
-            <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 45%" } }}>
-              <Paper
-                sx={{
-                  p: 3,
-                  backgroundColor: customTheme.colors.background.cardLight,
-                  border: `2px dashed ${customTheme.colors.primary.main}`,
-                  borderRadius: 2,
-                  textAlign: "center",
-                  minHeight: "200px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <PlayCircleOutline
-                  sx={{
-                    fontSize: "4rem",
-                    color: customTheme.colors.primary.main,
-                    mb: 2,
-                  }}
-                />
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: customTheme.colors.primary.main,
-                    mb: 1,
-                    fontWeight: "bold",
-                  }}
-                >
-                  Комплексная композиция
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: customTheme.colors.text.primary,
-                    opacity: 0.8,
-                  }}
-                >
-                  [Видео: Полный проект с несколькими фигурами]
-                </Typography>
-              </Paper>
-            </Box>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1.75rem", md: "2.5rem" },
+                mb: 4,
+              }}
+            >
+              Примеры анимации фигур
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: customTheme.colors.text.primary,
+                maxWidth: "600px",
+                mx: "auto",
+              }}
+            >
+              Изучите различные техники анимации фигур на практических примерах
+            </Typography>
           </Box>
-        </Container>
 
-        {/* Tips Section */}
-        <Container
-          title="Советы для начинающих"
-          icon={
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.primary.main,
+                fontSize: { xs: "1.5rem", md: "2rem" },
+                mb: 4,
+              }}
+            >
+              Посмотрите, что можно создать только с помощью фигур!
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: customTheme.colors.text.primary,
+                maxWidth: "800px",
+                mx: "auto",
+                mb: 6,
+              }}
+            >
+              Все эти рекламные элементы созданы исключительно с помощью базовых
+              инструментов After Effects — без плагинов, без сложных эффектов,
+              только фигуры (и текст)!
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "repeat(2, 1fr)",
+                sm: "repeat(3, 1fr)",
+                md: "repeat(3, 1fr)",
+              },
+              gap: 3,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/badge_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/badge_2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/badge_3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Box>
+        </MuiContainer>
+      </Box>
+
+      {/* Background Examples Section - White background */}
+      <Box
+        sx={{
+          backgroundColor: "#ffffff",
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <MuiContainer maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.primary.main,
+                fontSize: { xs: "1.5rem", md: "2rem" },
+                mb: 4,
+              }}
+            >
+              Цветные фоны для анимированных видео
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.8,
+                color: customTheme.colors.text.primary,
+                maxWidth: "800px",
+                mx: "auto",
+                mb: 6,
+              }}
+            >
+              Посмотрите, как можно создавать яркие и привлекательные фоны для
+              анимированных видео, используя только фигуры и базовые инструменты
+              After Effects
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "repeat(2, 1fr)",
+                sm: "repeat(3, 1fr)",
+                md: "repeat(3, 1fr)",
+              },
+              gap: 3,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/bg_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/bg_2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/bg_3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/bg_4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/bg_5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/bg_6.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Box>
+        </MuiContainer>
+      </Box>
+
+      {/* Tips Section - White background */}
+      <Box
+        sx={{
+          backgroundColor: "#ffffff",
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <MuiContainer maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 6 }}>
             <Timeline
-              sx={{ color: customTheme.colors.primary.main, fontSize: 30 }}
+              sx={{
+                fontSize: "3rem",
+                color: customTheme.colors.primary.main,
+                mb: 3,
+              }}
             />
-          }
-          variant="primary"
-        >
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1.75rem", md: "2.5rem" },
+                mb: 4,
+              }}
+            >
+              Советы для начинающих
+            </Typography>
+          </Box>
+
           <Box
             sx={{
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
-              gap: 3,
+              gap: 4,
             }}
           >
             <Box sx={{ flex: 1 }}>
               <Paper
                 sx={{
-                  p: 3,
-                  backgroundColor: customTheme.colors.background.cardLight,
-                  border: `1px solid ${customTheme.colors.primary.main}`,
+                  p: 4,
+                  backgroundColor: "#D8E1E3",
+                  border: "none",
                   borderRadius: 2,
                 }}
               >
@@ -530,12 +667,12 @@ const ShapeAnimationPage: React.FC = () => {
               </Paper>
             </Box>
 
-            <Box sx={{ flex: { xs: "1 1 100%", md: "1 1 45%" } }}>
+            <Box sx={{ flex: 1 }}>
               <Paper
                 sx={{
-                  p: 3,
-                  backgroundColor: customTheme.colors.background.cardLight,
-                  border: `1px solid ${customTheme.colors.primary.main}`,
+                  p: 4,
+                  backgroundColor: "#D8E1E3",
+                  border: "none",
                   borderRadius: 2,
                 }}
               >
@@ -563,8 +700,8 @@ const ShapeAnimationPage: React.FC = () => {
               </Paper>
             </Box>
           </Box>
-        </Container>
-      </MuiContainer>
+        </MuiContainer>
+      </Box>
     </Box>
   );
 };

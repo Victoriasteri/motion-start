@@ -1,44 +1,44 @@
-// Color palette and gradients for Motion Start app
+// Color palette for Motion Start app
 export const colors = {
-  // Primary colors - Deep purple to vibrant pink
+  // Primary colors - Based on new palette
   primary: {
-    main: "#E45A92",
-    light: "#FFACAC",
-    dark: "#5D2F77",
+    main: "#BC6C29", // Warm orange-brown
+    light: "#D8E1E3", // Light blue-gray
+    dark: "#9A5A21", // Darker orange-brown
     contrast: "#ffffff",
   },
 
-  // Secondary colors - Deep purple
+  // Secondary colors - Based on new palette
   secondary: {
-    main: "#3E1E68",
-    light: "#5D2F77",
-    dark: "#2A1345",
+    main: "#29505B", // Dark teal
+    light: "#D8E1E3", // Light blue-gray
+    dark: "#1F3A40", // Darker teal
     contrast: "#ffffff",
   },
 
-  // Background colors - Based on the new palette
+  // Background colors - Based on new palette
   background: {
-    dark: "#3E1E68",
-    card: "#5D2F77",
-    cardLight: "#7A4A8A",
-    light: "#FFACAC",
-    lightGradient: "#FFE5E5",
+    dark: "#29505B", // Dark teal for dark background
+    card: "#D8E1E3", // Light blue-gray for cards
+    cardLight: "#F0F4F5", // Very light blue-gray
+    light: "#D8E1E3", // Light blue-gray
+    lightGradient: "#F0F4F5", // Very light blue-gray
   },
 
-  // Text colors - Based on the new palette
+  // Text colors - Based on new palette
   text: {
-    primary: "#FFACAC",
-    secondary: "#3E1E68",
+    primary: "#1F3A40", // Dark teal for readability
+    secondary: "#BC6C29", // Warm orange-brown
     light: "#ffffff",
-    muted: "rgba(255, 172, 172, 0.8)",
+    muted: "rgba(31, 58, 64, 0.7)",
   },
 
-  // Accent colors - Based on the new palette
+  // Accent colors - Based on new palette
   accent: {
-    blue: "#E45A92",
-    pink: "#FFACAC",
-    teal: "#E45A92",
-    coral: "#FFACAC",
+    blue: "#BC6C29", // Warm orange-brown
+    pink: "#29505B", // Dark teal
+    teal: "#BC6C29", // Warm orange-brown
+    coral: "#29505B", // Dark teal
   },
 
   // Utility colors
@@ -57,69 +57,69 @@ export const colors = {
   },
 };
 
-// Gradient definitions
+// Solid color definitions (no gradients)
 export const gradients = {
-  // Background gradients - Based on the new palette
+  // Background colors - Solid colors only
   background: {
-    dark: "linear-gradient(135deg, #3E1E68 0%, #5D2F77 50%, #7A4A8A 100%)",
-    light: "linear-gradient(135deg, #FFACAC 0%, #FFE5E5 50%, #FFF0F0 100%)",
-    card: "linear-gradient(135deg, #5D2F77 0%, #7A4A8A 100%)",
-    cardReverse: "linear-gradient(135deg, #7A4A8A 0%, #5D2F77 100%)",
-    lightCard: "linear-gradient(135deg, #FFACAC 0%, #FFE5E5 100%)",
+    dark: "#29505B", // Dark teal
+    light: "#D8E1E3", // Light blue-gray
+    card: "#D8E1E3", // Light blue-gray
+    cardReverse: "#F0F4F5", // Very light blue-gray
+    lightCard: "#F0F4F5", // Very light blue-gray
   },
 
-  // Text gradients - Based on the new palette
+  // Text colors - Solid colors only
   text: {
-    logo: "linear-gradient(45deg, #E45A92, #FFACAC)",
-    primary: "linear-gradient(45deg, #E45A92, #FFACAC)",
-    secondary: "linear-gradient(45deg, #3E1E68, #5D2F77)",
+    logo: "#BC6C29", // Warm orange-brown
+    primary: "#BC6C29", // Warm orange-brown
+    secondary: "#1F3A40", // Dark teal
   },
 
-  // Button gradients - Based on the new palette
+  // Button colors - Solid colors only
   button: {
-    primary: "linear-gradient(135deg, #E45A92 0%, #5D2F77 100%)",
-    secondary: "linear-gradient(135deg, #3E1E68 0%, #2A1345 100%)",
-    hover: "linear-gradient(135deg, #FFACAC 0%, #E45A92 100%)",
+    primary: "#BC6C29", // Warm orange-brown
+    secondary: "#29505B", // Dark teal
+    hover: "#9A5A21", // Darker orange-brown
   },
 
-  // Card gradients - Based on the new palette
+  // Card colors - Solid colors only
   card: {
-    primary: "linear-gradient(135deg, #5D2F77 0%, #7A4A8A 100%)",
-    secondary: "linear-gradient(135deg, #7A4A8A 0%, #5D2F77 100%)",
-    light: "linear-gradient(135deg, #FFACAC 0%, #FFE5E5 100%)",
+    primary: "#D8E1E3", // Light blue-gray
+    secondary: "#F0F4F5", // Very light blue-gray
+    light: "#F0F4F5", // Very light blue-gray
   },
 };
 
-// Shadow definitions
+// Shadow definitions - No shadows for clean look
 export const shadows = {
-  // Box shadows - Based on the new palette
+  // Box shadows - No shadows
   box: {
-    small: "0 2px 8px rgba(0, 0, 0, 0.1)",
-    medium: "0 4px 16px rgba(0, 0, 0, 0.15)",
-    large: "0 8px 32px rgba(228, 90, 146, 0.2)",
-    xlarge: "0 12px 40px rgba(228, 90, 146, 0.15)",
-    pink: "0 8px 32px rgba(255, 172, 172, 0.2)",
-    pinkLarge: "0 12px 40px rgba(255, 172, 172, 0.15)",
+    small: "none",
+    medium: "none",
+    large: "none",
+    xlarge: "none",
+    pink: "none",
+    pinkLarge: "none",
   },
 
-  // Text shadows
+  // Text shadows - No shadows
   text: {
-    subtle: "0 1px 2px rgba(0, 0, 0, 0.1)",
-    medium: "0 2px 4px rgba(0, 0, 0, 0.2)",
-    strong: "0 4px 8px rgba(0, 0, 0, 0.3)",
+    subtle: "none",
+    medium: "none",
+    strong: "none",
   },
 };
 
-// Border definitions
+// Border definitions - No borders for clean look
 export const borders = {
-  // Border colors - Based on the new palette
+  // Border colors - No borders
   color: {
-    primary: `1px solid rgba(228, 90, 146, 0.3)`,
-    primaryLight: `1px solid rgba(228, 90, 146, 0.2)`,
-    secondary: `1px solid rgba(62, 30, 104, 0.3)`,
-    secondaryLight: `1px solid rgba(62, 30, 104, 0.2)`,
-    dashed: `2px dashed rgba(228, 90, 146, 0.3)`,
-    subtle: `1px solid rgba(255, 255, 255, 0.1)`,
+    primary: "none",
+    primaryLight: "none",
+    secondary: "none",
+    secondaryLight: "none",
+    dashed: "none",
+    subtle: "none",
   },
 
   // Border radius
@@ -200,29 +200,29 @@ export const components = {
   navbar: {
     background: gradients.background.dark,
     backdropFilter: "blur(10px)",
-    borderBottom: borders.color.primaryLight,
-    boxShadow: shadows.box.large,
+    borderBottom: "none",
+    boxShadow: "none",
   },
 
   // Card styles
   card: {
     primary: {
       background: gradients.card.primary,
-      border: borders.color.primary,
+      border: "none",
       borderRadius: borders.radius.large,
-      boxShadow: shadows.box.large,
+      boxShadow: "none",
     },
     secondary: {
       background: gradients.card.secondary,
-      border: borders.color.secondary,
+      border: "none",
       borderRadius: borders.radius.large,
-      boxShadow: shadows.box.pink,
+      boxShadow: "none",
     },
     light: {
       background: gradients.card.light,
-      border: borders.color.primaryLight,
+      border: "none",
       borderRadius: borders.radius.large,
-      boxShadow: shadows.box.medium,
+      boxShadow: "none",
     },
   },
 
@@ -240,22 +240,22 @@ export const components = {
     },
   },
 
-  // Chip styles - Based on the new palette with high contrast
+  // Chip styles - Based on the new palette with high contrast, no borders
   chip: {
     primary: {
-      backgroundColor: `rgba(228, 90, 146, 0.2)`,
-      color: "#FFFFFF", // White text for high contrast
-      border: borders.color.primaryLight,
+      backgroundColor: `rgba(188, 108, 41, 0.2)`,
+      color: "#1F3A40", // Dark teal text for high contrast
+      border: "none",
     },
     secondary: {
-      backgroundColor: `rgba(62, 30, 104, 0.2)`,
-      color: "#FFFFFF", // White text for high contrast
-      border: borders.color.secondaryLight,
+      backgroundColor: `rgba(41, 80, 91, 0.2)`,
+      color: "#1F3A40", // Dark teal text for high contrast
+      border: "none",
     },
     light: {
-      backgroundColor: `rgba(255, 172, 172, 0.2)`,
-      color: "#3E1E68", // Dark text for high contrast on light background
-      border: borders.color.primaryLight,
+      backgroundColor: `rgba(216, 225, 227, 0.2)`,
+      color: "#1F3A40", // Dark teal text for high contrast on light background
+      border: "none",
     },
   },
 };

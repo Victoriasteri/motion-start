@@ -1,4 +1,4 @@
-import { Timeline, TextFields, AutoAwesome } from "@mui/icons-material";
+import { Timeline, TextFields, AutoAwesome, Key } from "@mui/icons-material";
 import { theme as customTheme } from "../styles/theme";
 
 export interface KeyTool {
@@ -11,6 +11,14 @@ export interface KeyTool {
 }
 
 export const keyTools: KeyTool[] = [
+  {
+    id: "fundamentals",
+    icon: Key,
+    title: "Fundamentals",
+    description: "Основы анимации — ключевые кадры",
+    color: customTheme.colors.secondary.main,
+    href: "/tools/fundamentals",
+  },
   {
     id: "shape-animation",
     icon: Timeline,

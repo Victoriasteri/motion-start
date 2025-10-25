@@ -13,6 +13,8 @@ import {
   PlayCircleOutline,
   Code,
   Palette,
+  GpsFixed,
+  FlashOn,
 } from "@mui/icons-material";
 import { theme as customTheme } from "../../../styles/theme";
 
@@ -643,16 +645,25 @@ const ShapeAnimationPage: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: "bold",
-                    color: customTheme.colors.primary.main,
-                    mb: 2,
-                  }}
+                <Box
+                  sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}
                 >
-                  💡 Начните с простого
-                </Typography>
+                  <GpsFixed
+                    sx={{
+                      color: customTheme.colors.primary.main,
+                      fontSize: "1.5rem",
+                    }}
+                  />
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: "bold",
+                      color: customTheme.colors.primary.main,
+                    }}
+                  >
+                    Используйте Shape Layers
+                  </Typography>
+                </Box>
                 <Typography
                   variant="body2"
                   sx={{
@@ -660,9 +671,9 @@ const ShapeAnimationPage: React.FC = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  Начните с анимации простых форм — кругов, квадратов, линий.
-                  Изучите принципы easing и timing. Помните: лучше сделать
-                  простую анимацию качественно, чем сложную — плохо.
+                  Всегда создавайте фигуры через Shape Layers, а не через маски.
+                  Это даёт больше возможностей для анимации: Path, Fill, Stroke,
+                  Transform — всё в одном слое с независимой анимацией.
                 </Typography>
               </Paper>
             </Box>
@@ -676,16 +687,25 @@ const ShapeAnimationPage: React.FC = () => {
                   borderRadius: 2,
                 }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: "bold",
-                    color: customTheme.colors.primary.main,
-                    mb: 2,
-                  }}
+                <Box
+                  sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}
                 >
-                  ⚡ Изучите ключевые кадры
-                </Typography>
+                  <FlashOn
+                    sx={{
+                      color: customTheme.colors.primary.main,
+                      fontSize: "1.5rem",
+                    }}
+                  />
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: "bold",
+                      color: customTheme.colors.primary.main,
+                    }}
+                  >
+                    Освойте Trim Paths
+                  </Typography>
+                </Box>
                 <Typography
                   variant="body2"
                   sx={{
@@ -693,9 +713,9 @@ const ShapeAnimationPage: React.FC = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  Освойте работу с ключевыми кадрами и интерполяцией.
-                  Используйте Easy Ease для естественных переходов.
-                  Экспериментируйте с разными типами easing.
+                  Trim Paths — основа анимации фигур. Анимируйте Start и End для
+                  создания эффектов появления линий. Используйте Offset для
+                  вращения анимированных контуров.
                 </Typography>
               </Paper>
             </Box>

@@ -114,6 +114,8 @@ const Navbar: React.FC = () => {
             <Button
               color="inherit"
               startIcon={<StartIcon />}
+              component={Link}
+              href="/start-here"
               sx={{
                 color: customTheme.colors.text.primary,
                 fontWeight: "500",
@@ -171,6 +173,8 @@ const Navbar: React.FC = () => {
             <Button
               color="inherit"
               startIcon={<AutoFixHigh />}
+              component={Link}
+              href="/tips-tricks"
               sx={{
                 color: customTheme.colors.text.primary,
                 fontWeight: "500",
@@ -207,6 +211,13 @@ const Navbar: React.FC = () => {
               transformOrigin={{ vertical: "top", horizontal: "right" }}
               keepMounted
             >
+              <MenuItem
+                onClick={handleCloseMenu}
+                component={Link}
+                href="/start-here"
+              >
+                <StartIcon sx={{ mr: 1 }} /> Начни здесь
+              </MenuItem>
               <MenuItem onClick={handleCloseMenu}>
                 <MenuBook sx={{ mr: 1 }} /> Гайд
               </MenuItem>
@@ -230,8 +241,12 @@ const Navbar: React.FC = () => {
                   </MenuItem>
                 );
               })}
-              <MenuItem onClick={handleCloseMenu}>
-                <AutoFixHigh sx={{ mr: 1 }} /> Техники
+              <MenuItem
+                onClick={handleCloseMenu}
+                component={Link}
+                href="/tips-tricks"
+              >
+                <AutoFixHigh sx={{ mr: 1 }} /> Фишки
               </MenuItem>
             </Menu>
           </Box>

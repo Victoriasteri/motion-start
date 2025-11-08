@@ -28,6 +28,7 @@ import {
   Texture,
 } from "@mui/icons-material";
 import { theme as customTheme } from "../../styles/theme";
+import ResourceCard from "../../components/ResourceCard";
 
 const TipsTricksPage: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -731,6 +732,42 @@ const TipsTricksPage: React.FC = () => {
               </Card>
             </Box>
           </Box>
+
+          {/* Texture Resource Link */}
+          <Box
+            sx={{
+              textAlign: "center",
+              mt: 6,
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "0.875rem", md: "1rem" },
+                mb: 2,
+              }}
+            >
+              Пример бесплатных текстур, которые можно скачать и использовать:
+            </Typography>
+            <Link
+              href="https://unsplash.com/s/photos/grunge-texture"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: customTheme.colors.primary.main,
+                textDecoration: "none",
+                fontSize: { xs: "0.875rem", md: "1rem" },
+                fontWeight: 500,
+                "&:hover": {
+                  textDecoration: "underline",
+                  color: customTheme.colors.primary.dark,
+                },
+              }}
+            >
+              Unsplash - Grunge Textures →
+            </Link>
+          </Box>
         </Container>
       </Box>
 
@@ -887,17 +924,26 @@ const TipsTricksPage: React.FC = () => {
                     <Chip
                       label="High Quality"
                       size="small"
-                      sx={{ color: "#ffffff" }}
+                      sx={{
+                        color: "#ffffff",
+                        backgroundColor: customTheme.colors.secondary.main,
+                      }}
                     />
                     <Chip
                       label="Regular Updates"
                       size="small"
-                      sx={{ color: "#ffffff" }}
+                      sx={{
+                        color: "#ffffff",
+                        backgroundColor: customTheme.colors.secondary.main,
+                      }}
                     />
                     <Chip
                       label="New Projects"
                       size="small"
-                      sx={{ color: "#ffffff" }}
+                      sx={{
+                        color: "#ffffff",
+                        backgroundColor: customTheme.colors.secondary.main,
+                      }}
                     />
                   </Box>
                   <Button
@@ -1046,6 +1092,197 @@ const TipsTricksPage: React.FC = () => {
                   </Button>
                 </CardContent>
               </Card>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* Useful Websites Section - White background */}
+      <Box
+        sx={{
+          backgroundColor: "#ffffff",
+          py: { xs: 6, md: 10 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 8 }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                color: customTheme.colors.text.primary,
+                fontSize: { xs: "1.75rem", md: "2.5rem" },
+                mb: 4,
+              }}
+            >
+              Полезные сайты для дизайна
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", md: "1.2rem" },
+                lineHeight: 1.8,
+                color: customTheme.colors.text.primary,
+                maxWidth: "900px",
+                mx: "auto",
+              }}
+            >
+              Ресурсы для материалов, вдохновения и профессионального роста в
+              моушн-дизайне.
+            </Typography>
+          </Box>
+
+          {/* Useful Websites Grid */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 6,
+            }}
+          >
+            {/* Design Materials Section */}
+            <Box>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: "bold",
+                  color: customTheme.colors.text.primary,
+                  fontSize: { xs: "1.5rem", md: "2rem" },
+                  mb: 4,
+                  textAlign: "center",
+                }}
+              >
+                Материалы для дизайна
+              </Typography>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "repeat(1, 1fr)",
+                    sm: "repeat(2, 1fr)",
+                    md: "repeat(3, 1fr)",
+                  },
+                  gap: 3,
+                }}
+              >
+                <ResourceCard
+                  title="Freepik"
+                  description="Бесплатные и премиум графические ресурсы: векторы, фото, PSD, иконки."
+                  buttonColor="primary"
+                  onClick={() =>
+                    window.open("https://www.freepik.com/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Unsplash"
+                  description="Бесплатные высококачественные фотографии для коммерческого использования. Отлично подходит для фонов и текстур."
+                  buttonColor="primary"
+                  onClick={() => window.open("https://unsplash.com/", "_blank")}
+                />
+                <ResourceCard
+                  title="Pexels"
+                  description="Бесплатные стоковые фото и видео высокого качества для коммерческого использования."
+                  buttonColor="primary"
+                  onClick={() =>
+                    window.open("https://www.pexels.com/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Pixabay"
+                  description="Бесплатные изображения, видео, музыка и звуковые эффекты без авторских прав."
+                  buttonColor="primary"
+                  onClick={() => window.open("https://pixabay.com/", "_blank")}
+                />
+                <ResourceCard
+                  title="Adobe Stock"
+                  description="Премиум стоковые фото, видео, графики и шаблоны для After Effects и других инструментов Adobe."
+                  buttonColor="primary"
+                  onClick={() =>
+                    window.open("https://stock.adobe.com/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Google Fonts"
+                  description="Бесплатные веб-шрифты с открытым исходным кодом для использования в проектах."
+                  buttonColor="primary"
+                  onClick={() =>
+                    window.open("https://fonts.google.com/", "_blank")
+                  }
+                />
+              </Box>
+            </Box>
+
+            {/* Inspiration Section */}
+            <Box>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: "bold",
+                  color: customTheme.colors.text.primary,
+                  fontSize: { xs: "1.5rem", md: "2rem" },
+                  mb: 4,
+                  textAlign: "center",
+                }}
+              >
+                Вдохновение и портфолио
+              </Typography>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "repeat(1, 1fr)",
+                    sm: "repeat(2, 1fr)",
+                    md: "repeat(3, 1fr)",
+                  },
+                  gap: 3,
+                }}
+              >
+                <ResourceCard
+                  title="Dribbble"
+                  description="Платформа для дизайнеров, где можно найти вдохновение и показать свои работы."
+                  buttonColor="secondary"
+                  onClick={() => window.open("https://dribbble.com/", "_blank")}
+                />
+                <ResourceCard
+                  title="Behance"
+                  description="Портфолио и вдохновение от креативных профессионалов со всего мира."
+                  buttonColor="secondary"
+                  onClick={() =>
+                    window.open("https://www.behance.net/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Awwwards"
+                  description="Награды и признание лучших веб-дизайнов, интерфейсов и цифровых проектов."
+                  buttonColor="secondary"
+                  onClick={() =>
+                    window.open("https://www.awwwards.com/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Pinterest"
+                  description="Визуальная доска для поиска и сохранения идей, референсов и вдохновения."
+                  buttonColor="secondary"
+                  onClick={() =>
+                    window.open("https://www.pinterest.com/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Motionographer"
+                  description="Блог и сообщество о моушн-дизайне, анимации и визуальных эффектах."
+                  buttonColor="secondary"
+                  onClick={() =>
+                    window.open("https://motionographer.com/", "_blank")
+                  }
+                />
+                <ResourceCard
+                  title="Vimeo"
+                  description="Платформа для просмотра и публикации видео, включая моушн-дизайн и анимацию."
+                  buttonColor="secondary"
+                  onClick={() => window.open("https://vimeo.com/", "_blank")}
+                />
+              </Box>
             </Box>
           </Box>
         </Container>

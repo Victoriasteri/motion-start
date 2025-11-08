@@ -129,6 +129,33 @@ const MaskingEffectsPage: React.FC = () => {
             </Typography>
           </Box>
 
+          {/* Masking Video */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              mb: 6,
+            }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                maxWidth: "900px",
+                aspectRatio: "16/9",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/masking.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Box>
+
           {/* Masking Techniques */}
           <Box
             sx={{

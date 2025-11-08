@@ -878,9 +878,21 @@ const TipsTricksPage: React.FC = () => {
                   <Box
                     sx={{ display: "flex", flexWrap: "wrap", gap: 1, mb: 2 }}
                   >
-                    <Chip label="High Quality" size="small" />
-                    <Chip label="Regular Updates" size="small" />
-                    <Chip label="New Projects" size="small" />
+                    <Chip
+                      label="High Quality"
+                      size="small"
+                      sx={{ color: "#ffffff" }}
+                    />
+                    <Chip
+                      label="Regular Updates"
+                      size="small"
+                      sx={{ color: "#ffffff" }}
+                    />
+                    <Chip
+                      label="New Projects"
+                      size="small"
+                      sx={{ color: "#ffffff" }}
+                    />
                   </Box>
                   <Button
                     variant="contained"

@@ -294,6 +294,78 @@ const TextAnimationPage: React.FC = () => {
         </Container>
       </Box>
 
+      {/* Text Animation Videos Section - White background */}
+      <Box
+        sx={{
+          backgroundColor: "#ffffff",
+          py: { xs: 4, md: 6 },
+          px: { xs: 2, sm: 3 },
+        }}
+      >
+        <Container maxWidth="lg">
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "repeat(1, 1fr)",
+                sm: "repeat(2, 1fr)",
+                md: "repeat(3, 1fr)",
+              },
+              gap: 3,
+              justifyContent: "center",
+              alignItems: "center",
+              mb: 4,
+            }}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/text_1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/text_2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                aspectRatio: "1/1",
+                borderRadius: "12px",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/text_3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Box>
+        </Container>
+      </Box>
+
       {/* Tips and Tricks Section - White background */}
       <Box
         sx={{

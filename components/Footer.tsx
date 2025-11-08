@@ -170,29 +170,6 @@ const Footer: React.FC = () => {
             </Typography>
           </Box>
         </Box>
-
-        {/* Bottom Border */}
-        <Box
-          sx={{
-            mt: { xs: 3, md: 4 },
-            pt: { xs: 3, md: 4 },
-            borderTop: `1px solid rgba(41, 80, 91, 0.1)`,
-          }}
-        >
-          <Typography
-            variant="body2"
-            sx={{
-              color: customTheme.colors.text.secondary,
-              fontSize: { xs: "0.75rem", md: "0.8rem" },
-              textAlign: "center",
-              opacity: 0.7,
-              lineHeight: 1.6,
-            }}
-          >
-            Изучайте After Effects, создавайте анимации и начинайте зарабатывать
-            в моушн-дизайне
-          </Typography>
-        </Box>
       </Container>
     </Box>
   );

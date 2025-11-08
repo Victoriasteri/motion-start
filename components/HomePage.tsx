@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: 3,
+                gap: { xs: 2, md: 3 },
                 flexWrap: "wrap",
                 justifyContent: "center",
               }}
@@ -155,8 +155,8 @@ const HomePage: React.FC = () => {
               {/* Animated Circles with Stars */}
               <Box
                 sx={{
-                  width: "60px",
-                  height: "60px",
+                  width: { xs: "40px", md: "60px" },
+                  height: { xs: "40px", md: "60px" },
                   borderRadius: "50%",
                   backgroundColor: customTheme.colors.primary.main,
                   display: "flex",
@@ -173,13 +173,18 @@ const HomePage: React.FC = () => {
                   },
                 }}
               >
-                <Star sx={{ color: "#ffffff", fontSize: "24px" }} />
+                <Star
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: { xs: "16px", md: "24px" },
+                  }}
+                />
               </Box>
 
               <Box
                 sx={{
-                  width: "80px",
-                  height: "4px",
+                  width: { xs: "50px", md: "80px" },
+                  height: { xs: "3px", md: "4px" },
                   backgroundColor: customTheme.colors.primary.main,
                   borderRadius: "2px",
                   position: "relative",
@@ -210,8 +215,8 @@ const HomePage: React.FC = () => {
 
               <Box
                 sx={{
-                  width: "60px",
-                  height: "60px",
+                  width: { xs: "48px", md: "60px" },
+                  height: { xs: "48px", md: "60px" },
                   borderRadius: "50%",
                   backgroundColor: customTheme.colors.secondary.main,
                   display: "flex",
@@ -228,13 +233,18 @@ const HomePage: React.FC = () => {
                   },
                 }}
               >
-                <Star sx={{ color: "#ffffff", fontSize: "24px" }} />
+                <Star
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: { xs: "20px", md: "24px" },
+                  }}
+                />
               </Box>
 
               <Box
                 sx={{
-                  width: "80px",
-                  height: "4px",
+                  width: { xs: "50px", md: "80px" },
+                  height: { xs: "3px", md: "4px" },
                   backgroundColor: customTheme.colors.secondary.main,
                   borderRadius: "2px",
                   position: "relative",
@@ -265,8 +275,8 @@ const HomePage: React.FC = () => {
 
               <Box
                 sx={{
-                  width: "60px",
-                  height: "60px",
+                  width: { xs: "40px", md: "60px" },
+                  height: { xs: "40px", md: "60px" },
                   borderRadius: "50%",
                   backgroundColor: customTheme.colors.primary.main,
                   display: "flex",
@@ -283,7 +293,12 @@ const HomePage: React.FC = () => {
                   },
                 }}
               >
-                <Star sx={{ color: "#ffffff", fontSize: "24px" }} />
+                <Star
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: { xs: "16px", md: "24px" },
+                  }}
+                />
               </Box>
             </Box>
           </Box>
@@ -294,7 +309,7 @@ const HomePage: React.FC = () => {
             sx={{
               textAlign: "center",
               color: customTheme.colors.text.secondary,
-              fontSize: "0.9rem",
+              fontSize: { xs: "0.75rem", md: "0.9rem" },
               opacity: 0.7,
               fontStyle: "italic",
             }}

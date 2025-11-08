@@ -201,6 +201,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.primary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.primary.dark,
                       },
@@ -275,6 +276,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.primary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.primary.dark,
                       },
@@ -340,6 +342,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.secondary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.secondary.dark,
                       },
@@ -410,6 +413,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.primary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.primary.dark,
                       },
@@ -475,6 +479,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.secondary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.secondary.dark,
                       },
@@ -827,6 +832,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.primary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.primary.dark,
                       },
@@ -899,6 +905,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.secondary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.secondary.dark,
                       },
@@ -967,6 +974,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.primary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.primary.dark,
                       },
@@ -1027,6 +1035,7 @@ const TipsTricksPage: React.FC = () => {
                     size="small"
                     sx={{
                       backgroundColor: customTheme.colors.secondary.main,
+                      color: "#ffffff",
                       "&:hover": {
                         backgroundColor: customTheme.colors.secondary.dark,
                       },

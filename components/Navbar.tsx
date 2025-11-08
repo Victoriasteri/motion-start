@@ -22,6 +22,7 @@ import {
   AutoFixHigh,
   Menu as MenuIcon,
   ArrowDropDown,
+  School,
 } from "@mui/icons-material";
 import { keyTools } from "../data/keyTools";
 import { theme as customTheme } from "../styles/theme";
@@ -186,6 +187,23 @@ const Navbar: React.FC = () => {
               }}
             >
               Фишки
+            </Button>
+            <Button
+              color="inherit"
+              startIcon={<School />}
+              component={Link}
+              href="/lessons"
+              sx={{
+                color: customTheme.colors.text.primary,
+                fontWeight: "500",
+                "&:hover": {
+                  backgroundColor: "rgba(188, 108, 41, 0.15)",
+                  transform: "translateY(-2px)",
+                  transition: "all 0.3s ease",
+                },
+              }}
+            >
+              Уроки
             </Button>
           </Box>
 
